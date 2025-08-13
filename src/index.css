@@ -1,0 +1,40 @@
+@import "tailwindcss";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --violet-1: #7c3aed; /* primary */
+  --violet-2: #a78bfa; /* light accent */
+  --violet-3: #f5f3ff; /* soft bg */
+
+  color-scheme: light;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+body {
+  @apply bg-neutral-100 text-neutral-900;
+  margin: 0;
+}
+
+.bg-app {
+  background: radial-gradient(
+      120% 120% at 10% -10%,
+      #a78bfa22 0%,
+      transparent 60%
+    ),
+    radial-gradient(120% 120% at 100% 0%, #7c3aed22 0%, transparent 60%),
+    linear-gradient(180deg, #fafafa, #f5f3ff);
+}
+.card-glass {
+  backdrop-filter: blur(8px);
+  background: rgba(255, 255, 255, 0.9);
+}
+.badge {
+  @apply rounded-full px-2 py-0.5 text-[11px] font-semibold;
+}
